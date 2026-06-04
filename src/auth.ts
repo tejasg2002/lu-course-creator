@@ -8,7 +8,7 @@ export interface StudioUser {
   role: "admin" | "editor";
 }
 
-interface Session {
+export interface Session {
   token: string;
   user: StudioUser;
   activeCourseId: string | null;
