@@ -59,6 +59,8 @@ export interface TopicDraft {
   questions: PlannedQuestion[];
   /** CDN video URL (media.letsupgrade.net) — Deep Dive lesson */
   videoUrl?: string;
+  /** Filled after prepareCoursePlan / studio assembly */
+  contents?: PlannedContent[];
 }
 
 export type PreparedCoursePlan = CoursePlan & {

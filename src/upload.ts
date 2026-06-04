@@ -75,7 +75,9 @@ export async function uploadFileToCdn(
 
   const form = new FormData();
   const blob =
-    file instanceof Blob ? file : new Blob([file], { type: mimeType });
+    file instanceof Blob
+      ? file
+      : new Blob([new Uint8Array(file)], { type: mimeType });
   form.append("file", blob, filename);
   form.append("resource", resource);
 

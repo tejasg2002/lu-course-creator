@@ -141,7 +141,7 @@ export async function bulkCreateQuestions(
   topicId: string,
   questions: PlannedQuestion[]
 ) {
-  if (questions.length === 0) return [];
+  if (questions.length === 0) return 0;
   await request<unknown>(
     `/modules/${moduleId}/topics/${topicId}/questions/bulk`,
     {

@@ -31,6 +31,8 @@ export interface JourneyStep {
     cdnUrl?: string;
     /** CDN play URL (same as cdnUrl when set) — never YouTube */
     playUrl?: string;
+    /** @deprecated stripped on normalize — never published */
+    youtubeFallback?: string;
   };
   /** Transcript for this step — used in step 3 (course generation) */
   transcript: string;

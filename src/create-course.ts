@@ -42,7 +42,7 @@ export async function createCourseFromPrompt(
     }
 
     const lessonCount = plan.topics.reduce(
-      (n, t) => n + t.contents.length,
+      (n, t) => n + (t.contents?.length ?? 0),
       0
     );
     log(
